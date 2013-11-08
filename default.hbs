@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{meta_description}}" />
+    <title>{{meta_title}}</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="{{@blog.url}}assets/css/style.css">
+    <script src="http://use.typekit.net/gis6vng.js"></script>
+    <script>
+        try { Typekit.load(); } catch (e) {}
+    </script>
+    {{ghost_head}}
+</head>
+<body>
+    <div class="pure-g-r" id="layout">
+        <div class="sidebar pure-u">
+            <header class="header">
+                <hgroup>
+                    {{#if @blog.logo}}
+                        <a id="blog-logo" href="{{@blog.url}}">
+                            <img src="{{@blog.logo}}" alt="Blog Logo" />
+                        </a>
+                    {{/if}}
+                    <h1 class="brand-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+                    <h2 class="brand-description">{{@blog.description}}</h2>
+                </hgroup>
+            </header>
+        </div>
+
+        {{{body}}}
+    </div>
+
+    <script src="http://yui.yahooapis.com/3.12.0/build/yui/yui-min.js"></script>
+    <script>
+        YUI().use('node-base', 'node-event-delegate', function (Y) {
+    // This just makes sure that the href="#" attached to the <a> elements
+    // don't scroll you back up the page.
+    Y.one('body').delegate('click', function (e) {
+        e.preventDefault();
+    }, 'a[href="#"]');
+});
+    </script>
+
+
+
+</body>
+</html>

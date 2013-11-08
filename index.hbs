@@ -1,0 +1,44 @@
+{{!< default}}
+
+        <div class="pure-u-1">
+            <div class="content">
+
+                <div class="posts">
+                    {{#foreach posts}}
+                        <section class="post">
+                            <header class="post-header">
+                                {{#if author}}
+                                    <img class="post-avatar" alt="{{author.name}}'s avatar" src="{{author.image}}" height="72" width="72">
+                                {{/if}}
+                                <h1 class="post-title"><a href="{{url}}">{{{title}}}</a></h1>
+                                {{#if author}}
+                                    <p class="post-meta">
+                                        By <a class="post-author" href="#">{{author.name}}</a> 
+                                    </p>
+                                {{/if}}
+                                <p class="post-meta">
+                                    Posted on <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="dddd, MMMM DD, YYYY"}}</time>
+                                </p>
+                            </header>
+                            <div class="post-description">
+                                <p>{{excerpt}}&hellip;</p>
+                            </div>
+                        </section>
+
+                    {{/foreach}}
+                </div>
+
+                {{pagination}}
+                
+                <footer class="footer">
+                    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+                        <ul>
+                            <li><a href="http://purecss.io/">About</a></li>
+                            <li><a href="http://twitter.com/yuilibrary/">Twitter</a></li>
+                            <li><a href="http://github.com/yui/pure/">Github</a></li>
+                        </ul>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
