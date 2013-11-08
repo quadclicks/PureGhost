@@ -7,4 +7,4 @@ A simple theme for [Ghost](http://github.com/tryghost/ghost/) using the popular 
 
 Read more [here](http://blog.sujitagarwal.com/purecss-theme-for-ghost/)
 
-[Download Ghostwriter](https://github.com/quadclicks/PureGhost/archive/master.zip)
+[Download PureGhost](https://github.com/quadclicks/PureGhost/archive/master.zip)
